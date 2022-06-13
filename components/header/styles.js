@@ -8,11 +8,11 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors.primary,
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 20,
         paddingTop: 10,
     },
     title: {
         color: theme.colors.textSecondaryColor,
-        fontSize: 20,
+        fontSize: theme.fontSize.xLarge,
+        // fontFamily: 'source-sans-bold',
     }
 });

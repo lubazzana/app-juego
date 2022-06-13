@@ -1,12 +1,12 @@
-import { Text, View } from 'react-native';
-
+import CustomText from '../custom-text/index';
 import React from 'react';
+import { View } from 'react-native';
 import { styles } from './styles';
 
 const Header = ({ title }) => {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>{title}</Text>
+            <CustomText style={styles.title}>{title}</CustomText>
         </View>
     );
 }

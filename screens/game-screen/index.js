@@ -1,5 +1,5 @@
 import { Button, Text, View } from 'react-native';
-import { Card, NumberContainer } from '../../components/index';
+import { Card, CustomText, NumberContainer } from '../../components/index';
 import React, { useState } from 'react';
 
 import { styles } from './styles';
@@ -20,7 +20,7 @@ const GameScreen = ({userOptions}) => {
 
     return (
         <View style={styles.container}>
-            <Text>La suposición del oponente</Text>
+            <CustomText>La suposición del oponente</CustomText>
             <NumberContainer>{currentGuess}</NumberContainer>
             <Card style={styles.buttonContainer}>
                 <Button title="Menor" onPress={() => null} />
