@@ -36,7 +36,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
-        <Header title="Adivina el número"/>
+        <Header title="ADIVINA EL NÚMERO"/>
         {content}
       </View>
     </SafeAreaView>

@@ -1,16 +1,17 @@
 export default {
     colors: {
-        primary: '#61a0af',
-        secondary: '#00a680',
-        textColor: '#212121',
+        primary: '#007faa',
+        secondary: '#f2fcff',
+        accent: '#d95e51',
+        textColor: '#61656a',
         textSecondaryColor: '#fff',
-        placeholder: '#9e9e9e',
+        placeholder: '#8b8b8b',
     },
     fontSize: {
         small: 12,
         medium: 16,
         large: 20,
-        xLarge: 24,
+        xLarge: 28,
     },
     margin: {
         small: 5,

@@ -7,6 +7,6 @@ export const styles = StyleSheet.create({
         borderBottomColor: theme.colors.primary,
         borderBottomWidth: 1,
         marginVertical: theme.margin.medium,
-        color: theme.colors.textColor,
+        color: '#828282',
     },
 })

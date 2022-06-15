@@ -8,12 +8,12 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
     title: {
-        color: theme.colors.textColor,
+        color: theme.colors.primary,
         fontSize: theme.fontSize.large,
         marginVertical: 10,
     },
     subtitle: {
-        fontSize: theme.fontSize.medium,
+        fontSize: theme.fontSize.large,
     },
     inputContainer: {
         width: 300,
@@ -35,5 +35,10 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingVertical: 15,
         paddingHorizontal: 25,
+    },
+    cardTitle: {
+        fontSize: theme.fontSize.large,
+        marginBottom: 10,
+        color: theme.colors.primary,
     },
 })

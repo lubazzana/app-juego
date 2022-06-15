@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import theme from "../../constants/theme";
 
 export const styles = StyleSheet.create({
     container: {
@@ -10,6 +11,6 @@ export const styles = StyleSheet.create({
         shadowOpacity: 0.22,
         shadowRadius: 2.22,
         elevation: 3,
-        backgroundColor: "#ffffff",
+        backgroundColor: theme.colors.secondary,
     },
 });

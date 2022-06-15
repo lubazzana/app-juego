@@ -30,12 +30,12 @@ const StartGame = ({onStartGame}) => {
 
     const confirmedOutput = confirmed ? (
         <Card style={styles.inputContainer}>
-            <CustomText>Tu selección:</CustomText>
+            <CustomText style={styles.cardTitle}>TU SELECCIÓN</CustomText>
             <NumberContainer>{selectedNumber}</NumberContainer>
             <Button 
                 title="Empezar juego"
                 onPress={() => onStartGame(selectedNumber)} 
-                color={theme.colors.secondary} 
+                color={theme.colors.primary} 
             />
         </Card>
     ) : null;
@@ -65,12 +65,12 @@ const StartGame = ({onStartGame}) => {
                     <View style={styles.buttonContainer}>
                         <Button
                             title="Limpiar" 
-                            color={theme.colors.primary}
+                            color={theme.colors.accent}
                             onPress={() => onHandlerReset()}
                         />
                         <Button 
                             title="Confirmar" 
-                            color={theme.colors.secondary}
+                            color={theme.colors.primary}
                             onPress={() => onHandlerConfirm()}
                         />
                     </View>

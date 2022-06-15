@@ -3,6 +3,7 @@ import { Card, CustomText, NumberContainer } from '../../components/index';
 import React, { useState } from 'react';
 
 import { styles } from './styles';
+import theme from "../../constants/theme";
 
 const generateRandomNumber = (min, max, exclude) => {
     min = Math.ceil(min);
@@ -20,11 +21,11 @@ const GameScreen = ({userOptions}) => {
 
     return (
         <View style={styles.container}>
-            <CustomText>La suposición del oponente</CustomText>
+            <CustomText style={styles.title}>La suposición del oponente</CustomText>
             <NumberContainer>{currentGuess}</NumberContainer>
             <Card style={styles.buttonContainer}>
-                <Button title="Menor" onPress={() => null} />
-                <Button title="Mayor" onPress={() => null} />
+                <Button title="Menor" onPress={() => null} color={theme.colors.primary} />
+                <Button title="Mayor" onPress={() => null} color={theme.colors.primary} />
             </Card>
         </View>
     )
