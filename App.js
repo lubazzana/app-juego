@@ -1,5 +1,6 @@
 import { ActivityIndicator, SafeAreaView, View } from 'react-native';
 
+import GameOver from './screens/game-over';
 import GameScreen from './screens/game-screen';
 import { Header } from './components/index';
 import StartGame from './screens/start-game';
@@ -17,20 +18,31 @@ export default function App() {
     'source-sans-italic': require('./assets/fonts/SourceSansPro-Italic.ttf'),
   });
   const [userNumber, setUserNumber] = useState();
+  const [guessRounds, setGuessRounds] = useState(0);
 
   if (!loaded) {
     return <ActivityIndicator size="large" color='#212121'/>;
+  };
+
+  const handleGameOver = (rounds) => {
+    setGuessRounds(rounds);
   }
-
-
+  const handleRestartGame = () => {
+    setGuessRounds(0);
+    setUserNumber(null);
+  }
   const onStartGame = (selectedNumber) => {
     setUserNumber(selectedNumber);
-  }
+    setGuessRounds(0);
+  };
 
   let content = <StartGame onStartGame={onStartGame} />;
 
-  if (userNumber) {
-    content = <GameScreen userOptions={userNumber} />;
+
+  if (userNumber && guessRounds <= 0) {
+    content = <GameScreen userOptions={userNumber} onGameOver={handleGameOver} />;
+  } else if (guessRounds > 0) {
+    content = <GameOver rounds={guessRounds} choice={userNumber} onRestart={handleRestartGame}/>
   }
   
   return (

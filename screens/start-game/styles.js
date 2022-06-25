@@ -1,7 +1,13 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
+
 import theme from "../../constants/theme";
 
+const { width, height } = Dimensions.get("window");
+
 export const styles = StyleSheet.create({
+    containerGeneric: {
+        flex: 1,
+    },
     screen: {
         flex: 1,
         padding: 10,
@@ -16,8 +22,9 @@ export const styles = StyleSheet.create({
         fontSize: theme.fontSize.large,
     },
     inputContainer: {
-        width: 300,
-        maxWidth: '80%',
+        width: "80%",
+        maxWidth: "90%",
+        minWidth: width * 0.7,
         alignItems: 'center',
         paddingVertical: 20,
         marginTop: 10,
@@ -31,10 +38,9 @@ export const styles = StyleSheet.create({
     },
     buttonContainer: {
         flexDirection: 'row',
-        width: '100%',
+        width: width / 1.8,
         justifyContent: 'space-between',
-        paddingVertical: 15,
-        paddingHorizontal: 25,
+        paddingVertical: width > 600 ? 20 : 10,
     },
     cardTitle: {
         fontSize: theme.fontSize.large,
